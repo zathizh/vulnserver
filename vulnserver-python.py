@@ -21,7 +21,7 @@ def conn(client, addr):
                 response = subprocess.check_output(command, shell=True).strip()
                 log = str(addr[0]) + " " + str(addr[1]) + " " + command + "\t" + " ".join(response.split()) + "\n"
 
-		print(log)
+		print(log),
 		_LOG_FILE.write(log)
 
                 client.send(">>" + str(response) + "\n>>")
